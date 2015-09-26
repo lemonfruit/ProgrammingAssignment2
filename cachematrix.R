@@ -1,4 +1,4 @@
-## In conjunction, both this functions help find the inverse
+## In conjunction, both these functions help find the inverse
 ## of a matrix, given that finding the inverse of a matrix
 ## is a resource consuming task, when the inverse has
 ## already been calculated the data is retrieved from cache.
@@ -10,8 +10,8 @@
 ## mat1 %*% cacheSolve(mat)
 
 
-## This function stores a matrix with the ability to
-## store it's inverse matrix
+## This function creates a matrix object with the ability to
+## store it's own inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
     inversem <- NULL
@@ -28,8 +28,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Calculates the mean of the matrix created
-## with the above function and stores it in cache.
+## Calculates the inverse of the matrix created
+## with the above function and stores it in cache,
+## if it's been calculated before, it retrieves
+## the inverse from cache.
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
